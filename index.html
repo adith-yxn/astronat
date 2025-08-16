@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AstroNat — Live Space News</title>
+  <meta name="description" content="AstroNat — curated space news, articles, and live updates. No external images." />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="navbar" role="banner">
+    <div class="wrap row">
+      <div class="brand">
+        <div class="logo">🛰️</div>
+        <div>
+          <h1>AstroNat</h1>
+          <div class="tag">Live space news • Owned by Adithyan</div>
+        </div>
+      </div>
+
+      <nav class="nav-controls" role="navigation" aria-label="main">
+        <input id="q" class="search" placeholder="Search articles & news..." aria-label="Search" />
+        <select id="category" class="select">
+          <option value="all">All topics</option>
+          <option>ISRO</option><option>NASA</option><option>SpaceX</option>
+          <option>Astronomy</option><option>Moon</option><option>Mars</option>
+          <option>Satellites</option><option>Deep Space</option><option>Business</option>
+        </select>
+        <select id="sort" class="select">
+          <option value="new">Newest</option>
+          <option value="old">Oldest</option>
+        </select>
+        <div class="theme-group">
+          <button id="themeBtn" class="btn">Theme</button>
+          <button id="readerBtn" class="btn">Reader</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero card">
+      <h2>AstroNat — Space news, deep reads, and live updates</h2>
+      <p class="muted">Clean, fast, and image-free. Use the search and filters to explore.</p>
+      <div class="hero-actions">
+        <button id="loadNews" class="btn">Load Live News</button>
+        <button id="toggleAuto" class="btn">Auto-refresh: ON</button>
+      </div>
+    </section>
+
+    <section id="featured" aria-label="Featured articles">
+      <h3 class="section-title">Featured Articles</h3>
+      <div id="articles" class="grid"></div>
+      <div id="noArticles" class="empty" hidden>No articles found.</div>
+    </section>
+
+    <section id="live" class="gap" aria-label="Live news">
+      <div class="row">
+        <h3 class="section-title">Live Space News</h3>
+        <div id="lastUpdated" class="muted small">Last updated —</div>
+      </div>
+
+      <h4 class="section-sub">Today</h4>
+      <div id="newsToday" class="grid"></div>
+
+      <h4 class="section-sub">Yesterday</h4>
+      <div id="newsYesterday" class="grid"></div>
+
+      <h4 class="section-sub">Earlier</h4>
+      <div id="newsEarlier" class="grid"></div>
+
+      <div id="newsEmpty" class="empty" hidden>No live items right now.</div>
+
+      <div class="row mt">
+        <button id="refreshNews" class="btn">Refresh Now</button>
+        <button id="loadMoreNews" class="btn">Load More</button>
+      </div>
+    </section>
+
+    <section id="faves" class="gap">
+      <h3 class="section-title">Saved Favorites</h3>
+      <div id="favList" class="grid"></div>
+      <div id="noFavs" class="empty" hidden>No saved favorites.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 AstroNat • Adithyan’s Gateway to the Cosmos</p>
+  </footer>
+
+
+
+  <button id="top" class="top-btn" title="Top">↑</button>
+
+  <script src="app.js"></script>
+</body>
+</html>

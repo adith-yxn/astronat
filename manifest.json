@@ -1,0 +1,12 @@
+{
+  "name": "AstroNat",
+  "short_name": "AstroNat",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0b0e12",
+  "theme_color": "#7aa2ff",
+  "description": "AstroNat — live space news with offline support and advanced reading modes",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
